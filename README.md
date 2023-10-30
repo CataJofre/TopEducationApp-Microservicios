@@ -1,1 +1,1 @@
-Aplicación de finanzas Peruniversitario Top Education
+Aplicación de finanzas Preuniversitario Top Education
