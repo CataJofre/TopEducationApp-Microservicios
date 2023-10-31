@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: estudiante-service
+  cloud:
+     config:
+     enabled: true
+     uri: http://localhost:8081
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/estudiante-service
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+
