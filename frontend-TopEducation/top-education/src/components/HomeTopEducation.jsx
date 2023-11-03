@@ -1,22 +1,27 @@
-import React from 'react';
-import styled from 'styled-components';
 
+import styled from 'styled-components';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import NavbarComponent from './NavbarComponent.jsx'; // Asegúrate de importar la barra de navegación
 
+
 export const HomeTopEducation = () => {
+
+
     return (
         <div>
        
        <NavbarComponent />
       <HomeStyle>
-        <section className="main-content">
-          <Link to="/estudiantes/nuevo" className="info-box">
+        <section className="main-content" >
+        <Link Link to="/estudiante/guardar" className="info-box" >
             <div>
               <h2>Registrar nuevo estudiante</h2>
               <p>Registro de nuevo estudiante.</p>
             </div>
           </Link>
+      
+          
           <Link to="/pagar" className="info-box">
             <div>
               <h2>Pagar Cuotas</h2>

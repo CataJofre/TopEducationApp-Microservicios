@@ -1,15 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 export const NavbarComponent = () => {
   return (
     <NavStyle>
       <header>
         <nav className="navbar navbar-expand-lg navbar-light">
-          <Link to="/" className="navbar-brand">TopEducation Finanzas</Link>
+          <Link to="/" className="navbar-brand">
+            TopEducation Finanzas
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -22,24 +23,36 @@ export const NavbarComponent = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
-            <Link to="/" className="nav-item nav-link active ml-auto">Home</Link>
-            <Link to="/cuotas" className="nav-item nav-link ml-auto">Cuotas</Link>
-            <Link to="/arancel" className="nav-item nav-link ml-auto">Aranceles</Link>
-            <Link to="/estudiantes" className="nav-item nav-link ml-auto">Estudiantes</Link>
-            <Link to="/examenes" className="nav-item nav-link ml-auto">Examenes</Link>
-            <Link to="/generar" className="nav-item nav-link ml-auto">Generar Cuotas</Link>
-            <Link to="/pagar" className="nav-item nav-link ml-auto">Pagar aquí</Link>
+            <Link to="/" className="nav-item nav-link active ml-auto">
+              Home
+            </Link>
+            <Link to="/cuotas" className="nav-item nav-link ml-auto">
+              Cuotas
+            </Link>
+            <Link to="/arancel" className="nav-item nav-link ml-auto">
+              Aranceles
+            </Link>
+            <Link to="/estudiantes" className="nav-item nav-link ml-auto">
+              Estudiantes
+            </Link>
+            <Link to="/examenes" className="nav-item nav-link ml-auto">
+              Examenes
+            </Link>
+            <Link to="/generar" className="nav-item nav-link ml-auto">
+              Generar Cuotas
+            </Link>
+            <Link to="/pagar" className="nav-item nav-link ml-auto">
+              Pagar aquí
+            </Link>
           </div>
         </nav>
       </header>
     </NavStyle>
   );
-}
+};
 
-
-
- export default NavbarComponent;
- const NavStyle = styled.nav`
+export default NavbarComponent;
+const NavStyle = styled.nav`
     /* Estilos personalizados */
   .navbar {
     background-color: #ffffff;
@@ -64,4 +77,4 @@ export const NavbarComponent = () => {
     margin-left: 20px;
   }
   .
-`
+`;
