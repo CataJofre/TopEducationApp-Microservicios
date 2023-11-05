@@ -1,6 +1,6 @@
 import axios from 'axios'; // Importa Axios u otra biblioteca
 
-const ESTUDIANTE_API_URL = "http://localhost:8081/estudiante";
+const ESTUDIANTE_API_URL = "http://localhost:8080/estudiante";
 
 class EstudianteService {
     guardarEstudiante(estudiante) {

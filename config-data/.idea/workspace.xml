@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9121b4ac-4202-4d10-9ce7-317a793a8ab2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuotas-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cuotas-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/informacion-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/informacion-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/Controller/EstudianteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/Controller/EstudianteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-TopEducation/top-education/src/components/CrearEstudiante.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-TopEducation/top-education/src/components/CrearEstudiante.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-TopEducation/top-education/src/components/HomeTopEducation.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-TopEducation/top-education/src/components/HomeTopEducation.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-TopEducation/top-education/src/services/CrearEstudiante.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-TopEducation/top-education/src/services/CrearEstudiante.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
