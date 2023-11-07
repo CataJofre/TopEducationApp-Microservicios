@@ -9,6 +9,7 @@ eureka:
       default-zone: http://eureka-service:8761/eureka
   instance:
     hostname: localhost
+
 spring:
   cloud:
     gateway:
@@ -16,7 +17,7 @@ spring:
         locator:
           enabled: true
       default-filters:
-      - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
       globalcors:
         cors-configurations:
           '[/**]':
@@ -24,6 +25,7 @@ spring:
             allowed-methods: "*"
             allowed-headers: "*"
             allow-credentials: true
+      routes:
         routes:
           - id: estudiante-service
             uri: lb://estudiante-service
