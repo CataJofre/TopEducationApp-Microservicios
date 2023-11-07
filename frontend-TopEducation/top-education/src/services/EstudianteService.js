@@ -8,4 +8,6 @@ class EstudianteService {
     }
 }
 
-export default new EstudianteService()
+const estudianteService = new EstudianteService(); // Asigna la instancia a una variable
+
+export default estudianteService; // Exporta la variable como módulo por defecto
