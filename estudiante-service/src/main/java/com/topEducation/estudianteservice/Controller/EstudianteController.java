@@ -15,7 +15,7 @@ public class EstudianteController {
     @Autowired
     private EstudianteService estudianteService;
 
-    @PostMapping("/guardar")
+    @PostMapping()
     public ResponseEntity<EstudianteEntity> guardarEstudiante(@RequestBody EstudianteEntity estudiante) {
         estudiante.setPromedio(1.0); // Establece el promedio en 1
         EstudianteEntity estudianteGuardado = estudianteService.guardarEstudiante(estudiante);

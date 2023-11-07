@@ -1,6 +1,6 @@
 import axios from 'axios'; // Importa Axios u otra biblioteca
 
-const ESTUDIANTE_API_URL = "http://localhost:8080/estudiante";
+const ESTUDIANTE_API_URL = "http://localhost:8084/estudiante";
 
 class EstudianteService {
     guardarEstudiante(estudiante) {
@@ -8,4 +8,4 @@ class EstudianteService {
     }
 }
 
-export default new EstudianteService();
+export default new EstudianteService()
