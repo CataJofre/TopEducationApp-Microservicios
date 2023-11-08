@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9121b4ac-4202-4d10-9ce7-317a793a8ab2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../estudiante-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../estudiante-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/EstudianteServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/EstudianteServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/Controller/EstudianteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/Controller/EstudianteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend-TopEducation/top-education/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-TopEducation/top-education/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../frontend-TopEducation/top-education/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-TopEducation/top-education/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-TopEducation/top-education/src/services/EstudianteService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-TopEducation/top-education/src/services/EstudianteService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

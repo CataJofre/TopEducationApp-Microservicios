@@ -1,4 +1,4 @@
-import axios from 'axios'; // Importa Axios u otra biblioteca
+import axios from 'axios'; 
 
 const ESTUDIANTE_API_URL = "http://localhost:8080/estudiante";
 
@@ -8,6 +8,6 @@ class EstudianteService {
     }
 }
 
-const estudianteService = new EstudianteService(); // Asigna la instancia a una variable
+const estudianteService = new EstudianteService(); 
 
-export default estudianteService; // Exporta la variable como módulo por defecto
+export default estudianteService; 
