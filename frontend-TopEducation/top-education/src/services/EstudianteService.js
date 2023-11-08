@@ -8,6 +8,6 @@ class EstudianteService {
     }
 }
 
-const estudianteService = new EstudianteService(); 
 
-export default estudianteService; 
+
+export default new EstudianteService(); 

@@ -1,5 +1,3 @@
-
-
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomeTopEducation from './components/HomeTopEducation'; // Importa tu componente HomeTopEducation
 import EstudianteForm from "./components/CrearEstudiante";
