@@ -23,9 +23,4 @@ spring:
             allowed-methods: "*"
             allowed-headers: "*"
             allow-credentials: true
-      routes:
-        - id: estudiante-service
-          uri: lb://estudiante-service
-          predicates:
-            - Path=/estudiante/**
        
