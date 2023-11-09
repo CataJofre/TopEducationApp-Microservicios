@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import EstudianteService from "../services/AlumnoService.js";
+import EstudianteService from "../services/EstudianteService.js";
 import { useNavigate } from "react-router-dom";
 
 const CrearEstudiante = () => {
