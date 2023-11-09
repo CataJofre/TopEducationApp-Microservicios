@@ -16,6 +16,7 @@ const CrearEstudiante = () => {
     tipo_colegio: '',
     tipo_pago: '',
     arancel: 0,
+    cantidad_cuotas:'',
   });
   const navigate = useNavigate();
 
@@ -100,6 +101,7 @@ const CrearEstudiante = () => {
                 <br />
                 <div className="form-group">
                   <label>Tipo de colegio de procedencia:</label>
+                  <br />  
                   <select
                     name="tipo_colegio"
                     id="tipo_colegio"
@@ -148,6 +150,7 @@ const CrearEstudiante = () => {
                 <br />
                 <div className="form-group">
                   <label>Medio de pago:</label>
+                  <br />
                   <select
                     name="tipo_pago"
                     id="tipo_pago"
@@ -156,11 +159,25 @@ const CrearEstudiante = () => {
                     onChange={handleChange}
                   >
                     <option value='' defaultValue disabled>
-                      Seleccione tipo de colegio
+                      Seleccione tipo de pago:
                     </option>
                     <option value="Cuotas">Cuotas</option>
                     <option value="Contado">Contado</option>
                   </select>
+                </div>
+                <br />
+                <div className="form-group">
+                  <label>Cantidad de cuotas:</label>
+                  <input
+                    type="text"
+                    name="egreso_colegio"
+                    className="form-control"
+                    placeholder="Cantidad cuotas"
+                    required
+                    maxLength="2"
+                    value={estudiante.cantidad_cuotas}
+                    onChange={handleChange}
+                  />
                 </div>
                 <br />
                 <div className="box-footer">

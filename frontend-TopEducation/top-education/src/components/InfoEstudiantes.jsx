@@ -79,6 +79,7 @@ const InfoEstudiante = () => {
             <p>Año de egreso: {estudianteInfo.egreso_colegio}</p>
             <p>Tipo de colegio: {estudianteInfo.tipo_colegio}</p>
             <p>Tipo de Pago: {estudianteInfo.tipo_pago}</p>
+            <p>Cantidad de cuotas: {estudianteInfo.cantidad_cuotas}</p>
           </div>
         )}
       </section>

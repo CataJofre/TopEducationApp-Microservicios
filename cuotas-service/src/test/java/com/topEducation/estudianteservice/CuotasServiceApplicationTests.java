@@ -1,4 +1,4 @@
-package com.topEducation.cuotasservice;
+package com.topEducation.estudianteservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

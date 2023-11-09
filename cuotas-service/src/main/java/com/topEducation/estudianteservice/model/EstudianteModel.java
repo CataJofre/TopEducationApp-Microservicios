@@ -1,13 +1,13 @@
-package com.topEducation.estudianteservice.entity;
+package com.topEducation.estudianteservice.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import java.time.LocalDate;
 
 @Entity
@@ -15,7 +15,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EstudianteEntity {
+public class EstudianteModel{
     @Id
     @Column(unique = true, nullable = false)
     private Long rut_estudiante;
