@@ -1,22 +1,30 @@
-package com.topEducation.estudianteservice.Controller;
+package com.topEducation.estudianteservice.controller;
 
-import com.topEducation.estudianteservice.Entity.EstudianteEntity;
-import com.topEducation.estudianteservice.Service.EstudianteService;
+import com.topEducation.estudianteservice.entity.EstudianteEntity;
+import com.topEducation.estudianteservice.service.EstudianteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 
-@RestController
 @RequestMapping("/estudiante")
+@RestController
 public class EstudianteController {
-
     @Autowired
-    private EstudianteService estudianteService;
+    EstudianteService estudianteService;
+
+
+    @GetMapping()
+    public ResponseEntity<List<EstudianteEntity>> todos(){
+        List<EstudianteEntity>estudiantes = estudianteService.getAll();
+        return ResponseEntity.ok(estudiantes);
+    }
+
     @PostMapping()
-    public ResponseEntity<EstudianteEntity> save(@RequestBody EstudianteEntity estudiante){
-        estudianteService.guardar(estudiante);
-        return ResponseEntity.ok(estudiante);
+    public ResponseEntity<EstudianteEntity> save(@RequestBody EstudianteEntity estudianteEntity){
+        estudianteService.guardar(estudianteEntity);
+        return ResponseEntity.ok(estudianteEntity);
     }
 
 }

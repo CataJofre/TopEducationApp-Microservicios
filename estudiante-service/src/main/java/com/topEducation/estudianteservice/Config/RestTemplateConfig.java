@@ -1,4 +1,4 @@
-package com.topEducation.estudianteservice.Config;
+package com.topEducation.estudianteservice.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
@@ -13,5 +13,4 @@ public class RestTemplateConfig {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
-
 }

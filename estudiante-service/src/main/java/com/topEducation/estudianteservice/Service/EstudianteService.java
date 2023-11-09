@@ -1,24 +1,31 @@
-package com.topEducation.estudianteservice.Service;
+package com.topEducation.estudianteservice.service;
 
-import com.topEducation.estudianteservice.Entity.EstudianteEntity;
-import com.topEducation.estudianteservice.Repository.EstudianteRepository;
+import com.topEducation.estudianteservice.entity.EstudianteEntity;
+import com.topEducation.estudianteservice.repository.EstudianteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class EstudianteService {
     @Autowired
     EstudianteRepository estudianteRepository;
 
-    public EstudianteEntity guardar(EstudianteEntity newEstudiante){
+    public void guardar(EstudianteEntity newEstudiante){
         if (newEstudiante != null){
             if (newEstudiante.getTipo_pago().equals("Contado")){
                 newEstudiante.setArancel(750000);
-                return estudianteRepository.save(newEstudiante);
+                estudianteRepository.save(newEstudiante);
+                return;
             }
             newEstudiante.setArancel(0);
-            return estudianteRepository.save(newEstudiante);
+            estudianteRepository.save(newEstudiante);
         }
-        return null;
     }
+
+    public List<EstudianteEntity> getAll(){
+        return estudianteRepository.findAll();
+    }
+
 }

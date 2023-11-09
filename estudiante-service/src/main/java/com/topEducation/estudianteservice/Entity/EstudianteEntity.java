@@ -1,19 +1,20 @@
-package com.topEducation.estudianteservice.Entity;
+package com.topEducation.estudianteservice.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+
 @Entity
-@Table(name = "estudiante")
+@Table(name="estudiante")
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 public class EstudianteEntity {
     @Id
     @Column(unique = true, nullable = false)
@@ -26,5 +27,4 @@ public class EstudianteEntity {
     private String tipo_colegio;
     private String tipo_pago;
     private int arancel;
-
 }
