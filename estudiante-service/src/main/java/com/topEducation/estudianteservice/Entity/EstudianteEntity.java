@@ -24,6 +24,7 @@ public class EstudianteEntity {
     private int egreso_colegio;
     private String nombre_colegio;
     private String tipo_colegio;
-    private double promedio;
+    private String tipo_pago;
+    private int arancel;
 
 }

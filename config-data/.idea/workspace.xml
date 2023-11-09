@@ -5,7 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9121b4ac-4202-4d10-9ce7-317a793a8ab2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../estudiante-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../estudiante-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend-TopEducation/.idea/frontend-TopEducation.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend-TopEducation/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend-TopEducation/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend-TopEducation/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend-TopEducation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cuotas-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/cuotas-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/estudiante-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/estudiante-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/informacion-service.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/informacion-service.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../config-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/Config/RestTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/Config/RestTemplateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/Controller/EstudianteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/Controller/EstudianteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/Entity/EstudianteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/Entity/EstudianteEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/Repository/EstudianteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/Repository/EstudianteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/Service/EstudianteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../estudiante-service/src/main/java/com/topEducation/estudianteservice/Service/EstudianteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../estudiante-service/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../estudiante-service/src/main/resources/bootstrap.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-TopEducation/top-education/src/components/CrearEstudiante.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-TopEducation/top-education/src/components/CrearEstudiante.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend-TopEducation/top-education/src/services/EstudianteService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend-TopEducation/top-education/src/services/EstudianteService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway-service/src/main/java/com/topEducation/gatewayservice/GatewayServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/src/main/java/com/topEducation/gatewayservice/GatewayServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../gateway-service/src/main/resources/bootstrap.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../gateway-service/src/main/resources/bootstrap.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
