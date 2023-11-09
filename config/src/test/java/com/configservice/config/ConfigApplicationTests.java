@@ -1,10 +1,10 @@
-package com.topEducation.configservice;
+package com.configservice.config;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConfigServiceApplicationTests {
+class ConfigApplicationTests {
 
 	@Test
 	void contextLoads() {
