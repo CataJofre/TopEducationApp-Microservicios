@@ -27,10 +27,10 @@ export const HomeTopEducation = () => {
               <p>Información sobre las cuotas de todos los estudiantes.</p>
             </div>
           </a>
-          <a href="/arancel" className="info-box">
+          <a href="/estudiante" className="info-box">
             <div>
-              <h2>Aranceles</h2>
-              <p>Aranceles vigentes para nuestros programas educativos.</p>
+              <h2>Información de estudiantes</h2>
+              <p>Informacion de los estudiantes matriculados.</p>
             </div>
           </a>
           <a href="/informacion_estudiante" className="info-box">

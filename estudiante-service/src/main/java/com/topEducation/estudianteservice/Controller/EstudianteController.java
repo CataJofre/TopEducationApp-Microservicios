@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RequestMapping("/estudiante")
 @RestController
@@ -25,6 +26,10 @@ public class EstudianteController {
     public ResponseEntity<EstudianteEntity> save(@RequestBody EstudianteEntity estudianteEntity){
         estudianteService.guardar(estudianteEntity);
         return ResponseEntity.ok(estudianteEntity);
+    }
+    @GetMapping("/{rutEstudiante}")
+    public Optional<EstudianteEntity> obtenerEstudiantePorRut(@PathVariable Long rutEstudiante) {
+        return estudianteService.obtenerEstudiantePorRut(rutEstudiante);
     }
 
 }

@@ -7,6 +7,10 @@ class EstudianteService {
     createEstudiante(data){
         return axios.post(ESTUDIANTE_API_URL, data);
     }
+    infoEstudiante(id){
+        return axios.get(ESTUDIANTE_API_URL + id);
+    }
+
 }
 
 const estudianteService = new EstudianteService(); 

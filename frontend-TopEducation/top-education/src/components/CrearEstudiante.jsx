@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import EstudianteService from "../services/EstudianteService.js";
 import { useNavigate } from "react-router-dom";
+import NavbarComponent from "./NavbarComponent.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const CrearEstudiante = () => {
   const [estudiante, setEstudiante] = useState({
@@ -31,8 +34,8 @@ const CrearEstudiante = () => {
   };
   return (
     <div>
-     
-
+     <NavbarComponent />
+     <br />
       <div className="container">
         <div className="row">
           <div className="col-lg-10 col-md-10 col-sm-10 container justify-content-center card">
@@ -162,7 +165,7 @@ const CrearEstudiante = () => {
                 <br />
                 <div className="box-footer">
                   <button className="btn btn-success" onClick={saveEstudiante}>
-                    Seleccionar Medio de pago
+                    Guardar estudiante
                   </button>
                 </div>
               </form>
