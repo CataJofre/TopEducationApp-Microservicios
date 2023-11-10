@@ -35,6 +35,56 @@ public class CuotasService {
         return cuotasRepository.findById(rutEstudiante);
     }
 
+    public int descuentoTipoColegio(String tipoColegio) {
+        if ("Municipal".equals(tipoColegio)) {
+            return 20;
+        } else if ("Subvencionado".equals(tipoColegio)) {
+            return 10;
+        } else if ("Privado".equals(tipoColegio)) {
+            return 0;
+        } else {
+            throw new IllegalArgumentException("Tipo de colegio desconocido: " + tipoColegio);
+        }
+    }
+    public int descuentoEgreso(int egreso) {
+        int actual = 2023;
+        int diferencia = actual - egreso;
+
+        if (diferencia < 1) {
+            return 15;
+        } else if (diferencia <= 2) {
+            return 8;
+        } else if (diferencia <= 4) {
+            return 4;
+        } else {
+            return 0;
+        }
+    }
+
+    public void generarCuotasParaEstudiante(Long rut_estudiante) {
+        EstudianteModel estudiante = getEstudiante(rut_estudiante).get(0);
+        if (estudiante != null) {
+            int cantidadCuotas = estudiante.getCantidad_cuotas();
+            int descuentoEgreso = descuentoEgreso(estudiante.getEgreso_colegio());
+            int descuentoColegio = descuentoTipoColegio(estudiante.getTipo_colegio());
+            double descuentoTotal = 1.0 - (descuentoColegio / 100.0) - (descuentoEgreso / 100.0);
+            double montoDespuesDescuento = 1500000 * descuentoTotal;
+            LocalDate fechaActual = LocalDate.now();
+            LocalDate fechaCuota = fechaActual.withDayOfMonth(5);
+            for (int i = 1; i <= cantidadCuotas; i++) {
+                CuotasEntity cuota = new CuotasEntity();
+                cuota.setRut_estudiante(estudiante.getRut_estudiante());
+                cuota.setEstadoCuota("Pendiente");
+                cuota.setCuotas_totales(cantidadCuotas);
+                cuota.setValor_de_cuota((int) (montoDespuesDescuento / cantidadCuotas));
+                cuota.setFechaPago(fechaCuota.plusMonths(i));
+                cuota.setDcto_media_examenes(0);
+                cuota.setCuotas_pagadas(0);
+                cuota.setInteres_aplicado(0);
+                cuotasRepository.save(cuota);
+            }
+        }
 
     }
+}
 

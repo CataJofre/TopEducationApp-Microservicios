@@ -3,33 +3,32 @@ package com.topEducation.estudianteservice.controller;
 import com.topEducation.estudianteservice.entity.CuotasEntity;
 import com.topEducation.estudianteservice.service.CuotasService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
-@RequestMapping("/estudiante")
+@RequestMapping("/cuotas")
 @RestController
 public class CuotasController {
     @Autowired
     CuotasService cuotasService;
 
 
-    @GetMapping()
-    public ResponseEntity<List<CuotasEntity>> todos(){
-        List<CuotasEntity>estudiantes = cuotasService.getAll();
-        return ResponseEntity.ok(estudiantes);
-    }
 
     @PostMapping()
-    public ResponseEntity<CuotasEntity> save(@RequestBody CuotasEntity cuotasEntity){
-        cuotasService.guardar(cuotasEntity);
-        return ResponseEntity.ok(cuotasEntity);
-    }
-    @GetMapping("/{rutEstudiante}")
-    public Optional<CuotasEntity> obtenerEstudiantePorRut(@PathVariable Long rutEstudiante) {
-        return cuotasService.obtenerEstudiantePorRut(rutEstudiante);
+    public ResponseEntity<String> generarCuotas(@RequestParam Long rutEstudiante) {
+        try {
+            cuotasService.generarCuotasParaEstudiante(rutEstudiante);
+            return new ResponseEntity<>("Cuotas generadas exitosamente", HttpStatus.OK);
+        } catch (NoSuchElementException e) {
+            return new ResponseEntity<>("Estudiante no encontrado", HttpStatus.NOT_FOUND);
+        } catch (Exception e) {
+            return new ResponseEntity<>("Error al generar cuotas: " + e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
 }

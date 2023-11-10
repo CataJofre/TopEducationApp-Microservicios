@@ -21,10 +21,10 @@ export const HomeTopEducation = () => {
               <p>Pago de cuotas.</p>
             </div>
           </a>
-          <a href="/cuotas" className="info-box">
+          <a href="/GenerarCuotas" className="info-box">
             <div>
               <h2>Cuotas de Estudiantes</h2>
-              <p>Información sobre las cuotas de todos los estudiantes.</p>
+              <p>Generar cuotas para un estudiante.</p>
             </div>
           </a>
           <a href="/estudiante" className="info-box">
