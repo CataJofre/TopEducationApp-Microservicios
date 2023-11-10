@@ -33,10 +33,10 @@ export const HomeTopEducation = () => {
               <p>Informacion de los estudiantes matriculados.</p>
             </div>
           </a>
-          <a href="/informacion_estudiante" className="info-box">
+          <a href="/mostrar" className="info-box">
             <div>
-              <h2>Estudiantes</h2>
-              <p>Información sobre los estudiantes y su progreso académico.</p>
+              <h2>Ver cuotas</h2>
+              <p>Información de las cuotas de un estudiante.</p>
             </div>
           </a>
           <a href="/examenes" className="info-box">

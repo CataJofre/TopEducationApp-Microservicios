@@ -3,6 +3,8 @@ import HomeTopEducation from './components/HomeTopEducation'; // Importa tu comp
 import EstudianteForm from "./components/CrearEstudiante";
 import InfoEstudiantes from "./components/InfoEstudiantes";
 import GenerarCuotas   from "./components/GenerarCuotas";
+import MostrarCuotas   from "./components/MostrarCuotas";
+import PagarCuotas     from "./components/PagarCuotas";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Route path="/guardar" element={<EstudianteForm/>} />
       <Route path="/estudiante" element={<InfoEstudiantes/>} />
       <Route path="/generar" element={<GenerarCuotas/>} />
+      <Route path="/mostrar" element={<MostrarCuotas/>} />
+      <Route path="/pagar" element={<PagarCuotas/>} />
       </Routes>
     </BrowserRouter>
     </div>

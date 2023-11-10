@@ -18,7 +18,6 @@ public class CuotasController {
     CuotasService cuotasService;
 
 
-
     @PostMapping()
     public ResponseEntity<String> generarCuotas(@RequestParam("rut_estudiante") Long rut_estudiante) {
 
@@ -33,4 +32,23 @@ public class CuotasController {
         }
     }
 
+    @GetMapping("{rut_estudiante}")
+    public List<CuotasEntity> obtenerCuotasPorRut(@PathVariable Long rut_estudiante) {
+        return cuotasService.obtenerCuotasPorRut(rut_estudiante);
+    }
+    @PostMapping("/procesar")
+    public void procesarCuotasVencidas() {
+        cuotasService.procesarCuotasVencidas();
+    }
+    @PostMapping("/pagar")
+    public ResponseEntity<String> registrarPago(@RequestBody List<Long> cuotasPagadasIds) {
+        try {
+            cuotasService.registrarPago(cuotasPagadasIds);
+            return ResponseEntity.ok("Pagos registrados exitosamente");
+        } catch (Exception e) {
+            return ResponseEntity.badRequest().body("Error al registrar pagos: " + e.getMessage());
+        }
+    }
+
 }
+
