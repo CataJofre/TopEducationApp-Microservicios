@@ -20,9 +20,11 @@ public class CuotasController {
 
 
     @PostMapping()
-    public ResponseEntity<String> generarCuotas(@RequestParam Long rutEstudiante) {
+    public ResponseEntity<String> generarCuotas(@RequestParam("rut_estudiante") Long rut_estudiante) {
+
+
         try {
-            cuotasService.generarCuotasParaEstudiante(rutEstudiante);
+            cuotasService.generarCuotasParaEstudiante(rut_estudiante);
             return new ResponseEntity<>("Cuotas generadas exitosamente", HttpStatus.OK);
         } catch (NoSuchElementException e) {
             return new ResponseEntity<>("Estudiante no encontrado", HttpStatus.NOT_FOUND);

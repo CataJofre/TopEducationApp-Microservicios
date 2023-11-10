@@ -20,12 +20,12 @@ public class CuotasService {
     CuotasRepository cuotasRepository;
     @Autowired
     private RestTemplate restTemplate;
-    public List<EstudianteModel> getEstudiante(Long rut) {
-        ResponseEntity<List<EstudianteModel>> responseEntity = restTemplate.exchange(
+    public EstudianteModel getEstudiante(Long rut) {
+        ResponseEntity<EstudianteModel> responseEntity = restTemplate.exchange(
                 "http://estudiante-service/estudiante/" + rut,
                 HttpMethod.GET,
                 null,
-                new ParameterizedTypeReference<List<EstudianteModel>>() {}
+                EstudianteModel.class  // Cambia aquí para que coincida con el tipo de respuesta esperado
         );
         return responseEntity.getBody();
     }
@@ -62,7 +62,7 @@ public class CuotasService {
     }
 
     public void generarCuotasParaEstudiante(Long rut_estudiante) {
-        EstudianteModel estudiante = getEstudiante(rut_estudiante).get(0);
+        EstudianteModel estudiante = getEstudiante(rut_estudiante);
         if (estudiante != null) {
             int cantidadCuotas = estudiante.getCantidad_cuotas();
             int descuentoEgreso = descuentoEgreso(estudiante.getEgreso_colegio());

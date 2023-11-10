@@ -21,7 +21,7 @@ export const HomeTopEducation = () => {
               <p>Pago de cuotas.</p>
             </div>
           </a>
-          <a href="/GenerarCuotas" className="info-box">
+          <a href="/generar" className="info-box">
             <div>
               <h2>Cuotas de Estudiantes</h2>
               <p>Generar cuotas para un estudiante.</p>

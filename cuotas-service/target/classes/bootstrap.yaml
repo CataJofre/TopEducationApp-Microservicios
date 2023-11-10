@@ -3,7 +3,7 @@ spring:
     restart:
       aditional-paths: src/main/java
   application:
-    name: estudiante-service
+    name: cuotas-service
   jpa:
     database: POSTGRESQL
     show-sql: true
@@ -14,6 +14,6 @@ spring:
       enabled: true
       uri: http://localhost:8081
   datasource:
-    url: jdbc:postgresql://localhost:5432/estudiante-service
+    url: jdbc:postgresql://localhost:5432/cuotas-service
     username: postgres
     password: 1234

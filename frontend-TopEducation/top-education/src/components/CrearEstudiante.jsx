@@ -170,11 +170,11 @@ const CrearEstudiante = () => {
                   <label>Cantidad de cuotas:</label>
                   <input
                     type="text"
-                    name="egreso_colegio"
+                    name="cantidad_cuotas"
                     className="form-control"
                     placeholder="Cantidad cuotas"
                     required
-                    maxLength="2"
+                    
                     value={estudiante.cantidad_cuotas}
                     onChange={handleChange}
                   />
