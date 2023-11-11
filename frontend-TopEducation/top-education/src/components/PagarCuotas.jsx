@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Button, Table } from 'react-bootstrap'; 
 import NavbarComponent from './NavbarComponent.jsx'; 
 import cuotasService from '../services/CuotasService';
+import { useNavigate } from "react-router-dom";
 
 const CuotasComponent = () => {
   const [cuotas, setCuotas] = useState([]);
@@ -35,7 +36,7 @@ const CuotasComponent = () => {
         : [...prevIds, cuotaId]
     );
   };
-
+  const navigate = useNavigate();
   const handleRegistroPago = async (event) => {
     event.preventDefault();
     try {
@@ -44,6 +45,7 @@ const CuotasComponent = () => {
     } catch (error) {
       alert('Error al registrar pagos: ' + error.message);
     }
+    navigate("/");
   };
 
   return (

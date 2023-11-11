@@ -5,6 +5,7 @@ import InfoEstudiantes from "./components/InfoEstudiantes";
 import GenerarCuotas   from "./components/GenerarCuotas";
 import MostrarCuotas   from "./components/MostrarCuotas";
 import PagarCuotas     from "./components/PagarCuotas";
+import AgregarPruebas from "./components/AgregarPruebas";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/generar" element={<GenerarCuotas/>} />
       <Route path="/mostrar" element={<MostrarCuotas/>} />
       <Route path="/pagar" element={<PagarCuotas/>} />
+      <Route path="/prueba" element={<AgregarPruebas/>} />
       </Routes>
     </BrowserRouter>
     </div>

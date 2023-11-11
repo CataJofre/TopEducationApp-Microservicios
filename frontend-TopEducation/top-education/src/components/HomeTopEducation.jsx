@@ -39,7 +39,7 @@ export const HomeTopEducation = () => {
               <p>Información de las cuotas de un estudiante.</p>
             </div>
           </a>
-          <a href="/examenes" className="info-box">
+          <a href="/prueba" className="info-box">
             <div>
               <h2>Exámenes Rendidos</h2>
               <p>Resultados de los exámenes.</p>
