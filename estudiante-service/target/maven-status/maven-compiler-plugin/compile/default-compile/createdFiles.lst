@@ -1,0 +1,6 @@
+com\topEducation\estudianteservice\EstudianteServiceApplication.class
+com\topEducation\estudianteservice\repository\EstudianteRepository.class
+com\topEducation\estudianteservice\config\RestTemplateConfig.class
+com\topEducation\estudianteservice\service\EstudianteService.class
+com\topEducation\estudianteservice\controller\EstudianteController.class
+com\topEducation\estudianteservice\entity\EstudianteEntity.class

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.topEducation.informacionservice.InformacionServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.387 s - in com.topEducation.informacionservice.InformacionServiceApplicationTests

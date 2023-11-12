@@ -1,0 +1,7 @@
+com\topEducation\estudianteservice\controller\CuotasController.class
+com\topEducation\estudianteservice\config\RestTemplateConfig.class
+com\topEducation\estudianteservice\entity\CuotasEntity.class
+com\topEducation\estudianteservice\repository\CuotasRepository.class
+com\topEducation\estudianteservice\model\EstudianteModel.class
+com\topEducation\estudianteservice\service\CuotasService.class
+com\topEducation\estudianteservice\CuotasServiceApplication.class
