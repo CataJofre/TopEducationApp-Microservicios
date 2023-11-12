@@ -61,40 +61,7 @@ public class PruebaService {
         }
         pruebaRepository.saveAll(pruebas);
     }
-    public void calcularPromedioYDescuentoPorMes() {
-        Integer mesMasGrande = pruebaRepository.encontrarMesMasGrande();
-        List<PruebaEntity> pruebas = pruebaRepository.obtenerPruebasPorMesMasGrande(mesMasGrande);
-        Map<Long, Double> promedios = new HashMap<>();
-        for (PruebaEntity prueba : pruebas) {
-            Long estudiante = prueba.getRut_estudiante();
-            double puntaje = prueba.getPuntaje_obtenido();
-            promedios.merge(estudiante, puntaje, (existing, newPuntaje) -> (existing + newPuntaje) / 2);
-        }
-        for (Map.Entry<Long, Double> entry : promedios.entrySet()) {
-            Long estudiante = entry.getKey();
-            Double promedio = entry.getValue();
-            int descuento = calcularDescuento(promedio);
-            ArancelEntity arancel = arancelRepository.findByRutEstudiante(estudiante);
-            arancel.setDcto_media_examenes(descuento);
 
-            arancel.setPromedio(promedio);
-            arancelRepository.save(arancel);
-        }
-    }
-
-    public int calcularDescuento(double promedio) {
-        int descuento;
-        if (promedio >= 950 && promedio <= 1000) {
-            descuento = 10;
-        } else if (promedio >= 900 && promedio <= 949) {
-            descuento = 5;
-        } else if (promedio >= 850 && promedio <= 899) {
-            descuento = 2;
-        } else {
-            descuento = 0;
-        }
-        return descuento;
-    }
 
 
 }

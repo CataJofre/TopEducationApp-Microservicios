@@ -28,7 +28,19 @@ const informacionService = {
     }
   },
   
-  
-};
+  plantilla: async (id) => {
+    try {
+      const response = await axios.post(`${PRUEBA_API_URL}/arancel/crear/${id}`);
+      console.log("Response Data from plantilla:", response.data);
+      return response.data;
+    } catch (error) {
+      console.error('Error al obtener el arancel:', error);
+      console.error('Detalles del error:', error.response);
+    }
+  },
+infoEstudiante(id){
+  return axios.post(PRUEBA_API_URL + id);
+}
+}
 
 export default informacionService;

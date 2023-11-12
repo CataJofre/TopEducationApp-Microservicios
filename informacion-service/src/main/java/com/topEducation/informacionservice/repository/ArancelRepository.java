@@ -11,4 +11,5 @@ import org.springframework.stereotype.Repository;
 public interface ArancelRepository extends JpaRepository<ArancelEntity, Long> {
     @Query("SELECT a FROM ArancelEntity a WHERE a.rut_estudiante = :rut_estudiante")
     ArancelEntity findByRutEstudiante(@Param("rut_estudiante") Long rut_Estudiante);
+
 }

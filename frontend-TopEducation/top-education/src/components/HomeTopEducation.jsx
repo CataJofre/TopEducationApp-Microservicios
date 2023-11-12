@@ -45,6 +45,19 @@ export const HomeTopEducation = () => {
               <p>Resultados de los exámenes.</p>
             </div>
           </a>
+          <a href="/arancel" className="info-box">
+            <div>
+              <h2>Arancel</h2>
+              <p>Información de los aranceles de estudiantes.</p>
+            </div>
+          </a>
+          <a href="/informacion" className="info-box">
+            <div>
+              <h2>Informacion</h2>
+              <p>Informacion completa del estudiante.</p>
+            </div>
+          </a>
+
         </section>
       </HomeStyle>
     </div>

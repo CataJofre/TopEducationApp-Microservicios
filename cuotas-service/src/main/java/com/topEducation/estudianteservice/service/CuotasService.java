@@ -26,7 +26,7 @@ public class CuotasService {
                 "http://estudiante-service/estudiante/" + rut,
                 HttpMethod.GET,
                 null,
-                EstudianteModel.class  // Cambia aquí para que coincida con el tipo de respuesta esperado
+                EstudianteModel.class
         );
         return responseEntity.getBody();
     }

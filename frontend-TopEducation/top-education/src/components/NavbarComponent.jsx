@@ -44,6 +44,12 @@ export const NavbarComponent = () => {
             <Link to="/pagar" className="nav-item nav-link ml-auto">
               Pagar aquí
             </Link>
+            <Link to="/arancel" className="nav-item nav-link ml-auto">
+              Arancel
+            </Link>
+            <Link to="/informacion" className="nav-item nav-link ml-auto">
+              Información
+            </Link>
           </div>
         </nav>
       </header>
