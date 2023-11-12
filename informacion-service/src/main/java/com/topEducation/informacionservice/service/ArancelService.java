@@ -61,7 +61,6 @@ public class ArancelService {
     }
 
 
-
     public ArancelEntity generarfsdfas(Long rut_estudiante) {
         EstudianteModel estudiante = getEstudiante(rut_estudiante);
         CuotasModel cuotas = getPrimeraCuota(rut_estudiante);
@@ -92,6 +91,7 @@ public class ArancelService {
         arancelRepository.save(arancel);
         return arancel;
     }
+
     public ArancelEntity generar(Long rut_estudiante) {
         EstudianteModel estudiante = getEstudiante(rut_estudiante);
         CuotasModel cuotas = getPrimeraCuota(rut_estudiante);
@@ -123,7 +123,7 @@ public class ArancelService {
         arancel.setTipo_de_pago(estudiante.getTipo_pago());
         if (arancel.getTipo_de_pago().equals("Contado")) {
             arancel.setMonto_pagar(750000);
-        } else{
+        } else {
             double montoBase = 1500000.0;
             double descuentoColegio = 1 - arancel.getDcto_colegio_procedencia() / 100.0;
             double descuentoTiempoEgreso = 1 - arancel.getDcto_tiempo_egreso() / 100.0;
@@ -182,7 +182,8 @@ public class ArancelService {
         }
         return descuento;
     }
-    public ArancelEntity actualizarPlanilla(Long rut_estudiante){
+
+    public ArancelEntity actualizarPlanilla(Long rut_estudiante) {
         ArancelEntity arancel = obtenerArancelPorRut(rut_estudiante);
         double promedio = calcularPromedio(rut_estudiante);
         int descuento = calcularDescuento(promedio);

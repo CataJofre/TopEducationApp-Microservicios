@@ -31,6 +31,7 @@ public class PruebaService {
 
     @Autowired
     private RestTemplate restTemplate;
+
     public EstudianteModel getEstudiante(Long rut) {
         ResponseEntity<EstudianteModel> responseEntity = restTemplate.exchange(
                 "http://estudiante-service/estudiante/" + rut,
@@ -40,9 +41,11 @@ public class PruebaService {
         );
         return responseEntity.getBody();
     }
+
     public List<PruebaEntity> obtenerTodasLasPruebas() {
         return pruebaRepository.findAll();
     }
+
     public void procesarArchivoCSV(MultipartFile file) throws IOException {
         // Leer el archivo CSV y guardar los datos en la base de datos
         List<PruebaEntity> pruebas = new ArrayList<>();
@@ -61,7 +64,6 @@ public class PruebaService {
         }
         pruebaRepository.saveAll(pruebas);
     }
-
 
 
 }

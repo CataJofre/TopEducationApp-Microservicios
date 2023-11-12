@@ -36,10 +36,12 @@ public class CuotasController {
     public List<CuotasEntity> obtenerCuotasPorRut(@PathVariable Long rut_estudiante) {
         return cuotasService.obtenerCuotasPorRut(rut_estudiante);
     }
+
     @PostMapping("/procesar")
     public void procesarCuotasVencidas() {
         cuotasService.procesarCuotasVencidas();
     }
+
     @PostMapping("/pagar")
     public ResponseEntity<String> registrarPago(@RequestBody List<Long> cuotasPagadasIds) {
         try {

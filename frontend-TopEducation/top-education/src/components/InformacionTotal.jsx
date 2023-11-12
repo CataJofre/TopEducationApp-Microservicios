@@ -4,22 +4,20 @@ import NavbarComponent from './NavbarComponent.jsx';
 
 const InfoEstudiante = () => {
   const [rutEstudiante, setRutEstudiante] = useState('');
-  const [estudianteInfo, setEstudianteInfo] = useState(null);
+  const [estudianteInfo, setEstudianteInfo] = useState({});
+
 
   const handleSearch = async () => {
     try {
       const response = await informacionService.infoEstudiante(rutEstudiante);
-
-      if (response.data) {
-        setEstudianteInfo(response.data);
-      } else {
-        setEstudianteInfo(null);
-      }
+  setEstudianteInfo(response); // Esto debería ser setEstudianteInfo(estudianteInfo) si infoEstudiante devuelve un objeto y no un array
+     
     } catch (error) {
       console.error('Error al buscar información del estudiante', error);
       setEstudianteInfo(null);
     }
   };
+  
 
   return (
     <div >

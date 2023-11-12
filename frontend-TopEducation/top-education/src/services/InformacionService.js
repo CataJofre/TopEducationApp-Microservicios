@@ -38,9 +38,17 @@ const informacionService = {
       console.error('Detalles del error:', error.response);
     }
   },
-infoEstudiante(id){
-  return axios.post(PRUEBA_API_URL + id);
-}
+  infoEstudiante: async (id) => {
+    try {
+      const response = await axios.post(`${PRUEBA_API_URL}/informacion/mostrar/${id}`);
+      console.log("Response Data from infoEstudiante:", response.data);
+      return response.data;
+    } catch (error) {
+      console.error('Error al obtener la información del estudiante:', error);
+      console.error('Detalles del error:', error.response);
+      throw error; // Re-lanzar el error para que pueda ser manejado en el componente
+    }
+  }
 }
 
 export default informacionService;

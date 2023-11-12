@@ -14,8 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class InfoController {
     @Autowired
     InfoService infoService;
-    @PostMapping("/mostrar/{rut_estudiante}")
-    public InfoEntity mostrarInfo (@PathVariable Long rut_estudiante) {
-        return   infoService.mostrarInfo(rut_estudiante);
+
+    @PostMapping("/informacion/mostrar/{rut_estudiante}")
+    public InfoEntity mostrarInfo(@PathVariable Long rut_estudiante) {
+        return infoService.mostrarInfo(rut_estudiante);
     }
 }

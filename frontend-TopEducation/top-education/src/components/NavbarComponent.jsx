@@ -35,7 +35,7 @@ export const NavbarComponent = () => {
             <Link to="/estudiante" className="nav-item nav-link ml-auto">
               Estudiantes
             </Link>
-            <Link to="/examenes" className="nav-item nav-link ml-auto">
+            <Link to="/prueba" className="nav-item nav-link ml-auto">
               Examenes
             </Link>
             <Link to="/generar" className="nav-item nav-link ml-auto">

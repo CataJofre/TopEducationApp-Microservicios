@@ -21,6 +21,7 @@ public class CuotasService {
     CuotasRepository cuotasRepository;
     @Autowired
     private RestTemplate restTemplate;
+
     public EstudianteModel getEstudiante(Long rut) {
         ResponseEntity<EstudianteModel> responseEntity = restTemplate.exchange(
                 "http://estudiante-service/estudiante/" + rut,
@@ -47,6 +48,7 @@ public class CuotasService {
             throw new IllegalArgumentException("Tipo de colegio desconocido: " + tipoColegio);
         }
     }
+
     public int descuentoEgreso(int egreso) {
         int actual = 2023;
         int diferencia = actual - egreso;
@@ -88,9 +90,11 @@ public class CuotasService {
             throw new IllegalArgumentException("Estudiante no encontrado");
         }
     }
+
     public List<CuotasEntity> obtenerCuotasPorRut(Long rut_estudiante) {
         return cuotasRepository.findByRutEstudiante(rut_estudiante);
     }
+
     public void procesarCuotasVencidas() {
         LocalDate fechaActual = LocalDate.now();
         List<CuotasEntity> cuotasPendientes = cuotasRepository.findByEstadoCuota("Pendiente"); // Obtener cuotas pendientes
@@ -130,6 +134,7 @@ public class CuotasService {
             }
         }
     }
+
     public void aplicarDescuentosEnCuotasPendientes() {
         List<CuotasEntity> cuotasPendientes = cuotasRepository.findByEstadoCuota("Pendiente");
         for (CuotasEntity cuota : cuotasPendientes) {

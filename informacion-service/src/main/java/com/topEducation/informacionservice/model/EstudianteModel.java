@@ -11,11 +11,11 @@ import javax.persistence.Table;
 import java.time.LocalDate;
 
 @Entity
-@Table(name="estudiante")
+@Table(name = "estudiante")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EstudianteModel{
+public class EstudianteModel {
     @Id
     @Column(unique = true, nullable = false)
     private Long rut_estudiante;

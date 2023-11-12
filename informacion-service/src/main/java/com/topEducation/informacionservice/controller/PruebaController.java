@@ -17,11 +17,13 @@ import java.util.NoSuchElementException;
 public class PruebaController {
     @Autowired
     PruebaService pruebaService;
+
     @GetMapping("/verPruebas")
     public ResponseEntity<List<PruebaEntity>> obtenerTodasLasPruebas() {
         List<PruebaEntity> pruebas = pruebaService.obtenerTodasLasPruebas();
         return ResponseEntity.ok(pruebas);
     }
+
     @PostMapping("/ingresarPrueba")
     public ResponseEntity<String> procesarArchivoCSV(@RequestParam("file") MultipartFile file) {
         try {

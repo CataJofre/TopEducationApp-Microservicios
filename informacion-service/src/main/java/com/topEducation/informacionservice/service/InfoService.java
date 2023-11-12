@@ -62,7 +62,7 @@ public class InfoService {
         info.setRutEstudiante(rut_estudiante);
         info.setNumeroExamenesRendidos(3);
         info.setPromedioPuntajeExamenes(700);
-        if (arancel.getTipo_de_pago().equals("Contado")) {
+        if (estudiante.getTipo_pago().equals("Contado")) {
             info.setMontoTotalArancel(750000);
         } else {
             double montoBase = 1500000.0;
